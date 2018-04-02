@@ -1,0 +1,42 @@
+@import 'variables.scss';
+
+@mixin desk1420 {
+	@media only screen and (max-width: $desk-1420){
+		@content;
+	}
+}
+@mixin desk1240 {
+	@media only screen and (max-width: $desk-1240){
+		@content;
+	}
+}
+@mixin desk1024{
+	@media only screen and (max-width: $desk-1024){
+		@content;
+	}
+}
+@mixin mobile920 {
+	@media only screen and (max-width: $mobile-920){
+		@content;
+	}
+}
+@mixin mobile768 {
+	@media only screen and (max-width: $mobile-768){
+		@content;
+	}
+}
+@mixin mobile420 {
+	@media only screen and (max-width: $mobile-420){
+		@content;
+	}
+}
+@mixin mobile375 {
+	@media only screen and (max-width: $mobile-375){
+		@content;
+	}
+}
+@mixin mobile320 {
+	@media only screen and (max-width: $mobile-320){
+		@content;
+	}
+}

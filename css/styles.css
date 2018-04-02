@@ -1,0 +1,114 @@
+@import url(normalize.css);
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400");
+* {
+  padding: 0;
+  margin: 0; }
+
+html {
+  font-family: Lato, sans-serif; }
+
+ul {
+  text-decoration: none;
+  list-style-type: none; }
+
+body {
+  width: 100%; }
+
+main .wrapper {
+  width: 100%;
+  max-width: 1366px;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto; }
+  @media only screen and (max-width: 1024px) {
+    main .wrapper {
+      max-width: 1024px; } }
+  main .wrapper .lateral {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ebebec;
+    align-items: center; }
+    main .wrapper .lateral .navigator {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 40px; }
+      main .wrapper .lateral .navigator .logo {
+        background-color: transparent;
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        border-radius: 50%;
+        border: 1px solid white; }
+  main .wrapper .main {
+    width: 70%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 80px; }
+    main .wrapper .main .first, main .wrapper .main .about, main .wrapper .main .bigpic, main .wrapper .main .awesome, main .wrapper .main .quote, main .wrapper .main .player {
+      width: 100%; }
+      main .wrapper .main .first header, main .wrapper .main .about header, main .wrapper .main .bigpic header, main .wrapper .main .awesome header, main .wrapper .main .quote header, main .wrapper .main .player header {
+        width: 100%;
+        padding: 60px 0 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center; }
+        main .wrapper .main .first header h1, main .wrapper .main .about header h1, main .wrapper .main .bigpic header h1, main .wrapper .main .awesome header h1, main .wrapper .main .quote header h1, main .wrapper .main .player header h1 {
+          color: #39373c;
+          font-family: Helvetica;
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 27px;
+          text-transform: uppercase;
+          display: inline; }
+          main .wrapper .main .first header h1 .orange, main .wrapper .main .about header h1 .orange, main .wrapper .main .bigpic header h1 .orange, main .wrapper .main .awesome header h1 .orange, main .wrapper .main .quote header h1 .orange, main .wrapper .main .player header h1 .orange {
+            color: #ff744d; }
+        main .wrapper .main .first header .deco-bar, main .wrapper .main .about header .deco-bar, main .wrapper .main .bigpic header .deco-bar, main .wrapper .main .awesome header .deco-bar, main .wrapper .main .quote header .deco-bar, main .wrapper .main .player header .deco-bar {
+          width: 85%;
+          height: 7px;
+          background-color: #ebebec; }
+    main .wrapper .main .first .img-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; }
+      main .wrapper .main .first .img-wrapper img {
+        width: 100%;
+        max-width: 121px;
+        height: 121px;
+        margin: 0 20px; }
+    main .wrapper .main .about {
+      width: 100%; }
+    main .wrapper .main .bigpic {
+      width: 100%; }
+    main .wrapper .main .awesome {
+      width: 100%; }
+    main .wrapper .main .quote {
+      width: 100%; }
+    main .wrapper .main .player {
+      width: 100%; }
+
+footer {
+  display: flex;
+  justify-content: center; }
+  footer .wrapper {
+    background-color: white; }
+    footer .wrapper .copyright {
+      color: #bcbcbc;
+      font-family: Helvetica;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 22px; }
+    footer .wrapper .random-text {
+      color: #d5d5d5;
+      font-family: "Santa Fe Let Plain";
+      font-size: 36px;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 22px; }
+
+/*# sourceMappingURL=styles.css.map */
