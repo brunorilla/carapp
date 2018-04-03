@@ -79,13 +79,11 @@ main {
         main .wrapper .lateral .info-wrapper .car-info {
           width: 100%;
           padding: 20px;
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
           color: #363339;
           font-family: Helvetica;
           font-size: 12px;
           font-weight: 400;
-          line-height: 22px;
-          box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16); }
+          line-height: 22px; }
           main .wrapper .lateral .info-wrapper .car-info form {
             width: 100%;
             display: flex;

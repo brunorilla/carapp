@@ -42,9 +42,22 @@ var form = document.querySelector('#infoForm');
 
 	form.addEventListener('submit', function(e){
 		e.preventDefault();
-		console.log(e);
+		var target = e.target;
+		console.dir(target);
+		var values = [];
+		for (var i = 0; i < target.length; i++) {			
+			values.push(target[i].value); 
+		}
+		fetchCarInfo(values);
 	});
 
-function fetchCarInfo(url){
-
+function fetchCarInfo(values){
+	inputs = [];
+	for (var i = 0; i < values.length; i++) {
+		console.log(values[i]);
+		if(values[i] != 'Consult'){
+			inputs.push(values[i]);
+		}		
+	}
+	console.log(inputs);
 }
