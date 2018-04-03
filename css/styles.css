@@ -1,6 +1,31 @@
 @import url(normalize.css);
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400");
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400");
+/* Material Design Box Shadow mixins */
+/**
+ * Computes a top-shadow for a card effect.
+ *
+ * @param {Number} $depth - depth level
+ *
+ * @return {List}
+ */
+/**
+ * Computes a bottom-shadow for a card effect.
+ *
+ * @param {Number} $depth - depth level
+ *
+ * @return {List}
+ */
+/**
+ * Gives a card depth effect.
+ *
+ * @param {Number} $depth - depth level (between 1 and 5)
+ *
+ * @link https://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality Google Design
+ *
+ * @requires {function} top-shadow
+ * @requires {function} bottom-shadow
+ */
 * {
   padding: 0;
   margin: 0; }
@@ -15,49 +40,121 @@ ul {
 body {
   width: 100%; }
 
-main .wrapper {
-  width: 100%;
-  max-width: 1366px;
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto; }
-  @media only screen and (max-width: 1024px) {
-    main .wrapper {
-      max-width: 1024px; } }
-  main .wrapper .lateral {
-    width: 30%;
+main {
+  padding: 40px 0 20px 0; }
+  main .wrapper {
+    width: 100%;
+    max-width: 1366px;
     display: flex;
-    flex-direction: column;
-    background-color: #ebebec;
-    align-items: center; }
-    main .wrapper .lateral .navigator {
-      width: 100%;
+    flex-direction: row;
+    margin: 0 auto; }
+    @media only screen and (max-width: 1024px) {
+      main .wrapper {
+        max-width: 1024px; } }
+    main .wrapper .lateral {
+      width: 30%;
       display: flex;
       flex-direction: column;
+      background-color: #ebebec;
       align-items: center;
-      padding-top: 40px; }
-      main .wrapper .lateral .navigator .logo {
-        background-color: transparent;
+      box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
+      main .wrapper .lateral .navigator {
         width: 100%;
-        max-width: 200px;
-        height: auto;
-        border-radius: 50%;
-        border: 1px solid white; }
-  main .wrapper .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0 40px;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16); }
+        main .wrapper .lateral .navigator .logo {
+          background-color: transparent;
+          width: 100%;
+          max-width: 200px;
+          height: auto;
+          border-radius: 50%;
+          border: 1px solid white;
+          box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16); }
+      main .wrapper .lateral .info-wrapper {
+        width: 100%;
+        display: flex; }
+        main .wrapper .lateral .info-wrapper .car-info {
+          width: 100%;
+          padding: 20px;
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          color: #363339;
+          font-family: Helvetica;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 22px;
+          box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16); }
+          main .wrapper .lateral .info-wrapper .car-info form {
+            width: 100%;
+            display: flex;
+            background-color: lightblue;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
+            main .wrapper .lateral .info-wrapper .car-info form h3 {
+              color: white;
+              font-family: Helvetica;
+              font-size: 24px;
+              font-weight: 700;
+              line-height: 28px;
+              text-transform: uppercase; }
+            main .wrapper .lateral .info-wrapper .car-info form input[type=text] {
+              width: 250px;
+              height: 50px;
+              background: none;
+              box-sizing: border-box;
+              border: 4px solid #FFFFFF;
+              color: #fff;
+              font-size: 24px;
+              font-weight: 400;
+              font-family: Helvetica;
+              outline: 0;
+              text-transform: uppercase;
+              margin: 10px 0;
+              padding: 10px; }
+            main .wrapper .lateral .info-wrapper .car-info form input[type=text]::placeholder {
+              color: white;
+              font-size: 18px;
+              line-height: 22px;
+              text-transform: uppercase; }
+            main .wrapper .lateral .info-wrapper .car-info form input[type=submit] {
+              width: 150px;
+              height: 50px;
+              background-color: white;
+              border: 1px solid lightgrey;
+              color: #222731;
+              padding: 10px 0;
+              text-transform: uppercase;
+              transition: background-color, top ,0.2s;
+              cursor: pointer;
+              font-size: 20px;
+              line-height: 24px;
+              margin: 20px 0;
+              box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
+              main .wrapper .lateral .info-wrapper .car-info form input[type=submit]:hover {
+                background-color: #222731;
+                color: white; }
+  main .main {
     width: 70%;
     background-color: white;
     display: flex;
     flex-direction: column;
     padding-left: 80px; }
-    main .wrapper .main .first, main .wrapper .main .about, main .wrapper .main .bigpic, main .wrapper .main .awesome, main .wrapper .main .quote, main .wrapper .main .player {
-      width: 100%; }
-      main .wrapper .main .first header, main .wrapper .main .about header, main .wrapper .main .bigpic header, main .wrapper .main .awesome header, main .wrapper .main .quote header, main .wrapper .main .player header {
+    main .main .first, main .main .about, main .main .bigpic, main .main .awesome, main .main .quote, main .main .player {
+      width: 100%;
+      margin: 20px 0;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16); }
+      main .main .first header, main .main .about header, main .main .bigpic header, main .main .awesome header, main .main .quote header, main .main .player header {
         width: 100%;
         padding: 60px 0 50px;
         display: flex;
         justify-content: space-around;
         align-items: center; }
-        main .wrapper .main .first header h1, main .wrapper .main .about header h1, main .wrapper .main .bigpic header h1, main .wrapper .main .awesome header h1, main .wrapper .main .quote header h1, main .wrapper .main .player header h1 {
+        main .main .first header h1, main .main .about header h1, main .main .bigpic header h1, main .main .awesome header h1, main .main .quote header h1, main .main .player header h1 {
           color: #39373c;
           font-family: Helvetica;
           font-size: 12px;
@@ -65,18 +162,18 @@ main .wrapper {
           line-height: 27px;
           text-transform: uppercase;
           display: inline; }
-          main .wrapper .main .first header h1 .orange, main .wrapper .main .about header h1 .orange, main .wrapper .main .bigpic header h1 .orange, main .wrapper .main .awesome header h1 .orange, main .wrapper .main .quote header h1 .orange, main .wrapper .main .player header h1 .orange {
+          main .main .first header h1 .orange, main .main .about header h1 .orange, main .main .bigpic header h1 .orange, main .main .awesome header h1 .orange, main .main .quote header h1 .orange, main .main .player header h1 .orange {
             color: #ff744d; }
-        main .wrapper .main .first header .deco-bar, main .wrapper .main .about header .deco-bar, main .wrapper .main .bigpic header .deco-bar, main .wrapper .main .awesome header .deco-bar, main .wrapper .main .quote header .deco-bar, main .wrapper .main .player header .deco-bar {
+        main .main .first header .deco-bar, main .main .about header .deco-bar, main .main .bigpic header .deco-bar, main .main .awesome header .deco-bar, main .main .quote header .deco-bar, main .main .player header .deco-bar {
           width: 85%;
           height: 7px;
           background-color: #ebebec; }
-    main .wrapper .main .first .img-wrapper {
+    main .main .first .img-wrapper {
       width: 100%;
       display: flex;
       justify-content: center;
       flex-wrap: wrap; }
-      main .wrapper .main .first .img-wrapper .car-image {
+      main .main .first .img-wrapper .car-image {
         width: 100%;
         max-width: 121px;
         height: 121px;
@@ -85,28 +182,16 @@ main .wrapper {
         background-position: center center;
         background-size: contain;
         border-radius: 30%; }
-    main .wrapper .main .about {
+    main .main .about {
       width: 100%; }
-      main .wrapper .main .about .info-wrapper {
-        width: 100%;
-        display: flex; }
-        main .wrapper .main .about .info-wrapper .car-info {
-          width: 33%;
-          padding: 20px;
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-          color: #363339;
-          font-family: Helvetica;
-          font-size: 12px;
-          font-weight: 400;
-          line-height: 22px; }
-    main .wrapper .main .bigpic {
-      width: 100%; }
-    main .wrapper .main .awesome {
-      width: 100%; }
-    main .wrapper .main .quote {
-      width: 100%; }
-    main .wrapper .main .player {
-      width: 100%; }
+      main .main .about .bigpic {
+        width: 100%; }
+      main .main .about .awesome {
+        width: 100%; }
+      main .main .about .quote {
+        width: 100%; }
+      main .main .about .player {
+        width: 100%; }
 
 footer {
   background-color: #39373c;

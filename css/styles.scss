@@ -15,6 +15,7 @@ body {width: 100%;}
 
 
 main{
+	padding: 40px 0 20px 0;
 	.wrapper {
 		width: 100%;
 		max-width: $desk-1366;
@@ -30,12 +31,14 @@ main{
 			flex-direction: column;
 			background-color: #ebebec;
 			align-items:center;
+			@include card(1);
 			.navigator {
 				width: 100%;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-				padding-top: 40px;
+				padding: 40px 0 40px;
+				@include card(2);
 				.logo {
 					background-color: transparent;
 					width: 100%;
@@ -43,9 +46,84 @@ main{
 					height: auto;
 					border-radius: 50%;
 					border: 1px solid white;
+					@include card(2	);
 
 				}
 			}
+			.info-wrapper {
+				width: 100%;
+				display:flex;
+				.car-info {
+					width: 100%;
+					padding: 20px;
+					box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+					color: #363339;
+					font-family: Helvetica;
+					font-size: 12px;
+					font-weight: 400;
+					line-height: 22px;
+					@include card(2);
+					form {
+						width: 100%;
+						display: flex;
+						background-color: lightblue;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						padding: 20px 0;
+						@include card(1);
+						h3 {
+							color:white;
+							font-family: Helvetica;
+							font-size: 24px;
+							font-weight: 700;
+							line-height: 28px;
+							text-transform: uppercase;
+						}
+						input[type=text] {
+						  width: 250px;
+						  height: 50px;
+						  background: none;
+						  box-sizing: border-box;
+						  border: 4px solid #FFFFFF;
+						  color: #fff;
+						  font-size: 24px;
+						  font-weight: 400;
+						  font-family: Helvetica;
+						  outline: 0;
+						  text-transform: uppercase;
+						  margin: 10px 0;
+						  padding: 10px;
+						}
+						input[type=text]::placeholder {
+						 	color: white;
+						 	font-size: 18px;
+						 	line-height: 22px;
+							text-transform: uppercase;
+						}
+						input[type=submit]{
+							width: 150px;
+							height: 50px;
+							background-color:white;
+							border: 1px solid lightgrey;
+							color:#222731;
+							padding: 10px 0 ;
+							text-transform: uppercase;
+							transition: background-color, top ,0.2s;
+							cursor: pointer;
+							font-size: 20px;
+							line-height: 24px;
+							margin: 20px 0;
+							@include card(1);
+							&:hover {
+								background-color: #222731;	
+								color: white;
+							}
+						}
+					}
+				}
+			}
+		}
 		}
 		.main{
 			width:70%;
@@ -55,6 +133,8 @@ main{
 			padding-left: 80px;
 			.first, .about, .bigpic, .awesome, .quote, .player {
 				width: 100%;
+				margin: 20px 0;
+				@include card(2);
 				header{
 					width:100%;
 					padding: 60px 0 50px;
@@ -100,21 +180,6 @@ main{
 			}	
 			.about{
 				width: 100%;
-				.info-wrapper {
-					width: 100%;
-					display:flex;
-					.car-info {
-						width: 33%;
-						padding: 20px;
-						box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-						color: #363339;
-						font-family: Helvetica;
-						font-size: 12px;
-						font-weight: 400;
-						line-height: 22px;
-					}
-				}
-			}
 			.bigpic{
 				width: 100%;
 			}
