@@ -86,11 +86,15 @@ main{
 					display: flex;
 					justify-content: center;
 					flex-wrap: wrap;
-					img {
+					.car-image {
 						width: 100%;
 						max-width: 121px;
 						height: 121px;
 						margin: 0 20px;
+						background-repeat: no-repeat;
+						background-position: center center;
+						background-size: contain;
+						border-radius: 30%;
 					}
 				}
 			}	
