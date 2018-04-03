@@ -87,6 +87,18 @@ main .wrapper {
         border-radius: 30%; }
     main .wrapper .main .about {
       width: 100%; }
+      main .wrapper .main .about .info-wrapper {
+        width: 100%;
+        display: flex; }
+        main .wrapper .main .about .info-wrapper .car-info {
+          width: 33%;
+          padding: 20px;
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          color: #363339;
+          font-family: Helvetica;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 22px; }
     main .wrapper .main .bigpic {
       width: 100%; }
     main .wrapper .main .awesome {
@@ -97,22 +109,22 @@ main .wrapper {
       width: 100%; }
 
 footer {
+  background-color: #39373c;
   display: flex;
-  justify-content: center; }
-  footer .wrapper {
-    background-color: white; }
-    footer .wrapper .copyright {
-      color: #bcbcbc;
-      font-family: Helvetica;
-      font-size: 12px;
-      font-weight: 400;
-      line-height: 22px; }
-    footer .wrapper .random-text {
-      color: #d5d5d5;
-      font-family: "Santa Fe Let Plain";
-      font-size: 36px;
-      font-weight: 400;
-      font-style: italic;
-      line-height: 22px; }
+  justify-content: center;
+  padding: 90px 0 30px; }
+  footer .wrapper .copyright {
+    color: #bcbcbc;
+    font-family: Helvetica;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px; }
+  footer .wrapper .random-text {
+    color: #d5d5d5;
+    font-family: "Santa Fe Let Plain";
+    font-size: 36px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 22px; }
 
 /*# sourceMappingURL=styles.css.map */

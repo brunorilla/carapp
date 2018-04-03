@@ -37,3 +37,14 @@ function renderImg(img){
 	}
 
 }
+
+var form = document.querySelector('#infoForm');
+
+	form.addEventListener('submit', function(e){
+		e.preventDefault();
+		console.log(e);
+	});
+
+function fetchCarInfo(url){
+
+}

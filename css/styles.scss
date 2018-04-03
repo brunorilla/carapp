@@ -100,6 +100,20 @@ main{
 			}	
 			.about{
 				width: 100%;
+				.info-wrapper {
+					width: 100%;
+					display:flex;
+					.car-info {
+						width: 33%;
+						padding: 20px;
+						box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+						color: #363339;
+						font-family: Helvetica;
+						font-size: 12px;
+						font-weight: 400;
+						line-height: 22px;
+					}
+				}
 			}
 			.bigpic{
 				width: 100%;
@@ -117,10 +131,11 @@ main{
 	}
 }
 footer {
+	background-color: #39373c;
 	display:flex;
 	justify-content: center;
+	padding: 90px 0 30px;
 	.wrapper{
-		background-color:white;
 		.copyright {
 			color: #bcbcbc;
 			font-family: Helvetica;
