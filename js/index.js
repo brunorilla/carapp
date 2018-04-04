@@ -90,25 +90,26 @@ function renderResults(data, count){
 	var sectionAbout = document.querySelector('.about');
 	var resultsDiv = document.createElement('div');
 	resultsDiv.classList.add('results');
+	var toRender = []
 	for (var i = 0; i < data.length; i++) {
 					data[i]
 		var template =	`	
-						
 							<article class="data-set">
 								<h3 class="data-title">Make</h3>
 								<p class="result">${data[i].Make_Name}</p>
 							</article>
 							<article class="data-set">
-								<h3 class="data-title">Make</h3>
+								<h3 class="data-title">Model</h3>
 								<p class="result">${data[i].Model_Name}</p>
 							</article>
 								
 			`;
-		resultsDiv.appendChild(template);	
-				
+		toRender.push(template);	
 				}			
-		sectionAbout.appendChild(resultsDiv);	
-			
+		console.log(toRender);
+		var toRender = toRender.join(" ");
+		resultsDiv.innerHTML = header+toRender;
+		sectionAbout.appendChild(resultsDiv);
 }
 /*
 
