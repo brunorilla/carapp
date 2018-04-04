@@ -151,7 +151,8 @@ main {
         padding: 60px 0 50px;
         display: flex;
         justify-content: space-around;
-        align-items: center; }
+        align-items: center;
+        box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
         main .main .first header h1, main .main .about header h1, main .main .bigpic header h1, main .main .awesome header h1, main .main .quote header h1, main .main .player header h1 {
           color: #39373c;
           font-family: Helvetica;
@@ -181,15 +182,53 @@ main {
         background-size: contain;
         border-radius: 30%; }
     main .main .about {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      main .main .about .response-header {
+        width: 90%;
+        background-color: white;
+        margin: 50px 0 0; }
+        main .main .about .response-header .response-heading {
+          font-family: Helvetica;
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 27px;
+          text-transform: uppercase; }
+      main .main .about .results {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0 10px; }
+        main .main .about .results .data-set {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          padding: 10px 0;
+          margin: 0 0 10px 0; }
+          main .main .about .results .data-set .data-title, main .main .about .results .data-set .data {
+            margin: 0 10px; }
+          main .main .about .results .data-set .data-title {
+            color: #FF7056;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+            text-transform: uppercase; }
+            main .main .about .results .data-set .data-title:after {
+              content: ": "; }
+          main .main .about .results .data-set .data {
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 300; }
+    main .main .bigpic {
       width: 100%; }
-      main .main .about .bigpic {
-        width: 100%; }
-      main .main .about .awesome {
-        width: 100%; }
-      main .main .about .quote {
-        width: 100%; }
-      main .main .about .player {
-        width: 100%; }
+    main .main .awesome {
+      width: 100%; }
+    main .main .quote {
+      width: 100%; }
+    main .main .player {
+      width: 100%; }
 
 footer {
   background-color: #39373c;

@@ -1,4 +1,4 @@
-
+"use strict";
 
 addEventListener('DOMContentLoaded', function(){
 	fetchImages();
@@ -52,12 +52,33 @@ var form = document.querySelector('#infoForm');
 	});
 
 function fetchCarInfo(values){
-	inputs = [];
+	var inputs = [];
 	for (var i = 0; i < values.length; i++) {
-		console.log(values[i]);
 		if(values[i] != 'Consult'){
 			inputs.push(values[i]);
 		}		
 	}
-	console.log(inputs);
+	values.pop();
+	console.log("Popped values"+values);
+	var make = values.slice(0,1);
+	var make = encodeURIComponent(make);
+	var model = values.slice(1);	
+	let url = "https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMake/"+make+"?format=json";
+	fetch(url).then(function(response){
+		return response.json();
+
+	})
+	.then(function(response){
+		var count = response.Count;
+		var	resultsArray = response.Results;
+		renderResults(resultsArray,count);
+	})
+	.catch(function(error){
+		console.log(error);
+	})
+}
+
+function renderResults(data, count){
+	console.log(data);
+	console.log(count);
 }
