@@ -81,4 +81,37 @@ function fetchCarInfo(values){
 function renderResults(data, count){
 	console.log(data);
 	console.log(count);
+	//var = document.querySelector()
+	var header = `
+					<div class="response-header">
+						<h2 class="response-heading">Your consult has given ${count} results</h2>
+					</div>
+				`;
+	var sectionAbout = document.querySelector('.about');
+	var resultsDiv = document.createElement('div');
+	resultsDiv.classList.add('results');
+	for (var i = 0; i < data.length; i++) {
+					data[i]
+		var template =	`	
+						
+							<article class="data-set">
+								<h3 class="data-title">Make</h3>
+								<p class="result">${data[i].Make_Name}</p>
+							</article>
+							<article class="data-set">
+								<h3 class="data-title">Make</h3>
+								<p class="result">${data[i].Model_Name}</p>
+							</article>
+								
+			`;
+		resultsDiv.appendChild(template);	
+				
+				}			
+		sectionAbout.appendChild(resultsDiv);	
+			
 }
+/*
+
+
+
+*/
