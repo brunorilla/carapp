@@ -44,6 +44,8 @@ var form = document.querySelector('#infoForm');
 		e.preventDefault();
 		var target = e.target;
 		console.dir(target);
+		let sectionAbout = document.querySelector('.about');
+		sectionAbout.innerHTML = "";
 		var values = [];
 		for (var i = 0; i < target.length; i++) {			
 			values.push(target[i].value); 
@@ -97,8 +99,7 @@ function renderResults(data, count){
 							<article class="data-set">
 								<h3 class="data-title">Make</h3>
 								<p class="result">${data[i].Make_Name}</p>
-							</article>
-							<article class="data-set">
+
 								<h3 class="data-title">Model</h3>
 								<p class="result">${data[i].Model_Name}</p>
 							</article>
