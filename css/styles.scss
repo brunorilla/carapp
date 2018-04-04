@@ -205,7 +205,8 @@ main{
 						align-items: center;
 						padding: 10px 0;
 						margin: 0 0 10px 0;
-						@include card(1)
+						@include card(1) ;
+						
 						.data-title , .data {
 							margin: 0 10px;
 						}
