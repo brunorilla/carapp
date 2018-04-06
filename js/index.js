@@ -42,6 +42,7 @@ var form = document.querySelector('#infoForm');
 
 	form.addEventListener('submit', function(e){
 		e.preventDefault();
+		deleteWarning();
 		var target = e.target;
 		console.dir(target);
 		let sectionAbout = document.querySelector('.about');
@@ -63,6 +64,7 @@ function fetchCarInfo(values){
 	values.pop();
 	console.log("Popped values"+values);
 	var make = values.slice(0,1);
+	var make = filterNumbers(make);
 	var make = encodeURIComponent(make);
 	var model = values.slice(1);	
 	let url = "https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMake/"+make+"?format=json";
@@ -112,6 +114,37 @@ function renderResults(data, count){
 		resultsDiv.innerHTML = header+toRender;
 		sectionAbout.appendChild(resultsDiv);
 }
+
+
+function filterNumbers(string){
+
+	var regEx = /[^0-9]/;
+
+	if (regEx.test(string)){
+		return string;
+	}else {
+		return tryAgain();
+	};
+}
+
+function tryAgain(){
+	console.log("TryAgain function is being executed");
+  	let warning = document.createElement('p');
+ 	warning.classList.add('warning');
+	warning.innerText="No numbers are allowed. Please try again."
+	let form = document.querySelector('#infoForm');
+	form.appendChild(warning);
+}
+
+function deleteWarning(){
+	var warning = document.querySelector('.warning');
+	if (warning){
+		warning.remove();
+	} else {
+		return false;
+	}
+}
+
 /*
 
 
