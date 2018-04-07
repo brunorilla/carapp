@@ -7,21 +7,37 @@ body {
   background-color: white; }
   body header {
     width: 100%;
-    align-items: center;
+    height: 500px;
     background-image: url("../img/paris.jpg");
-    background-position: center center;
+    background-position: 0 40%;
     background-size: cover;
     background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
     margin: 0 0 30px 0;
-    padding: 200px 0; }
-    body header h1 {
-      font-size: 3em;
-      opacity: 0; }
-    body header p {
-      font-size: 1em;
-      opacity: 0; }
+    transition: background-position 0.3s; }
+    body header:hover {
+      background-position: 0 60%; }
+      body header:hover .text {
+        opacity: 1; }
+    body header .text {
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      padding: 200px 0;
+      box-sizing: border-box;
+      text-align: center;
+      color: white;
+      opacity: 0;
+      transition: opacity 0.3s; }
+      body header .text h1 {
+        font-size: 3em;
+        margin: 20px 0; }
+      body header .text p {
+        width: 50%;
+        font-size: 1em;
+        text-align: center; }
   body .cards {
     width: 100%;
     display: flex;
@@ -37,14 +53,20 @@ body {
       border: none;
       width: 200px;
       padding: 30px 0;
-      color: white; }
+      color: white;
+      cursor: pointer; }
+      body .cards button:hover ~ .cards-container > .card {
+        opacity: 1; }
     body .cards .cards-container {
       width: 80%;
       display: flex;
       justify-content: space-around;
       margin: 40px 0; }
       body .cards .cards-container .card {
-        width: 40%; }
+        width: 40%;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        transition: opacity 0.3s; }
         body .cards .cards-container .card img {
           width: 100%;
           height: auto; }
@@ -54,11 +76,9 @@ body {
           display: flex;
           justify-content: center;
           background-color: white;
-          padding: 10px 0;
-          border-top: none;
-          border-left: 1px solid black;
-          border-right: 1px solid black;
-          border-bottom: 1px solid black; }
+          padding: 10px 0; }
+          body .cards .cards-container .card .descr p {
+            text-align: center; }
 
 /*
 button {
