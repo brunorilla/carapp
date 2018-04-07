@@ -107,7 +107,8 @@ main{
 							color:#222731;
 							padding: 10px 0 ;
 							text-transform: uppercase;
-							transition: background-color, top ,0.2s;
+							transition-property: background-color;
+							transition-duration: .5s;
 							cursor: pointer;
 							font-size: 20px;
 							line-height: 24px;
@@ -163,10 +164,36 @@ main{
 						width: 85%;
 						height: 7px;
 						background-color:#ebebec;
-					}
+					}					
 				}				
 			}
 			.first {
+				flex-direction: column;
+				header {
+					position: relative;
+					img {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						max-width: 120px;
+						height: auto;
+						background-color: grey;
+						transform-origin: 193px 164px;
+						animation: rotate 4s;
+
+					}
+					justify-content: center;
+					h1 {
+						width: 70%;
+						font-size: 22px;
+						line-height: 28px;
+						text-align: center;
+						.orange {
+							display: inline-block;
+						}						
+					}
+				}
 				.img-wrapper{
 					width: 100%;
 					display: flex;

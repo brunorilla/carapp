@@ -127,7 +127,8 @@ main {
               color: #222731;
               padding: 10px 0;
               text-transform: uppercase;
-              transition: background-color, top ,0.2s;
+              transition-property: background-color;
+              transition-duration: .5s;
               cursor: pointer;
               font-size: 20px;
               line-height: 24px;
@@ -173,20 +174,42 @@ main {
           width: 85%;
           height: 7px;
           background-color: #ebebec; }
-    main .main .first .img-wrapper {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap; }
-      main .main .first .img-wrapper .car-image {
+    main .main .first {
+      flex-direction: column; }
+      main .main .first header {
+        position: relative;
+        justify-content: center; }
+        main .main .first header img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          max-width: 120px;
+          height: auto;
+          background-color: grey;
+          transform-origin: 193px 164px;
+          animation: rotate 4s; }
+        main .main .first header h1 {
+          width: 70%;
+          font-size: 22px;
+          line-height: 28px;
+          text-align: center; }
+          main .main .first header h1 .orange {
+            display: inline-block; }
+      main .main .first .img-wrapper {
         width: 100%;
-        max-width: 121px;
-        height: 121px;
-        margin: 0 20px;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        border-radius: 30%; }
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; }
+        main .main .first .img-wrapper .car-image {
+          width: 100%;
+          max-width: 121px;
+          height: 121px;
+          margin: 0 20px;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+          border-radius: 30%; }
     main .main .about {
       width: 100%;
       display: flex;
