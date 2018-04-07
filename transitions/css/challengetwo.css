@@ -35,7 +35,7 @@ body {
         font-size: 3em;
         margin: 20px 0; }
       body header .text p {
-        width: 50%;
+        width: 30%;
         font-size: 1em;
         text-align: center; }
   body .cards {
@@ -58,7 +58,7 @@ body {
       body .cards button:hover ~ .cards-container > .card {
         opacity: 1; }
     body .cards .cards-container {
-      width: 80%;
+      width: 50%;
       display: flex;
       justify-content: space-around;
       margin: 40px 0; }
@@ -67,6 +67,10 @@ body {
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
         opacity: 0;
         transition: opacity 0.3s; }
+        body .cards .cards-container .card:first-child {
+          transition-delay: 0.3s; }
+        body .cards .cards-container .card:last-child {
+          transition-delay: 0.6s; }
         body .cards .cards-container .card img {
           width: 100%;
           height: auto; }
