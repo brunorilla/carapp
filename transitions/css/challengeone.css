@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Atomic+Age");
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  width: 100%; }
+  body .header {
+    width: 100%;
+    padding: 200px 0;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, #3494e6, #ec6ead);
+    background-size: 300%;
+    background-position: center;
+    transition-property: background-position;
+    transition-duration: 1s;
+    transition-timing-function: ease; }
+    body .header:hover {
+      background-position: 100%; }
+      body .header:hover h1 {
+        color: white; }
+    body .header h1 {
+      color: pink;
+      font-size: 60px;
+      line-height: 64px;
+      transition-property: color;
+      transition-duration: 1s;
+      font-family: 'Atomic Age', cursive; }
+
+/*# sourceMappingURL=challengeone.css.map */
