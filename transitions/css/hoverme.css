@@ -117,9 +117,106 @@ body {
         transition-property: height, width;
         transition-duration: 0.3s; }
     body .wrapper #five {
-      transition: box-shadow 0.4s; }
+      transition: box-shadow 0.4s;
+      position: relative; }
       body .wrapper #five:hover {
-        box-shadow: inset 0px 0px 30px #fff; }
+        box-shadow: inset 0px 0px 15px #fff; }
+        body .wrapper #five:hover:before {
+          transform: scale(1.2);
+          border-color: transparent; }
+      body .wrapper #five:before {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        border: 1px solid white;
+        top: 0;
+        left: 0;
+        transition: transform 0.3s, border-color 0.3s; }
+    body .wrapper #six {
+      position: relative;
+      transition: color 0.3s;
+      overflow: hidden; }
+      body .wrapper #six:hover {
+        color: #FF775C; }
+        body .wrapper #six:hover:before {
+          width: 100%; }
+      body .wrapper #six:before {
+        content: '';
+        height: 100%;
+        width: 0%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        transition: width 1s cubic-bezier(1, 0.3, 0.74, 0.32);
+        z-index: -1; }
+    body .wrapper #seven {
+      position: relative;
+      overflow: hidden;
+      transition: color 0.3s; }
+      body .wrapper #seven:hover {
+        color: #FF775C; }
+        body .wrapper #seven:hover:before {
+          width: 210%; }
+      body .wrapper #seven:before {
+        content: '';
+        width: 0%;
+        height: 200%;
+        position: absolute;
+        background-color: #fff;
+        transform: rotate(45deg);
+        top: -40px;
+        left: -100px;
+        transition: width 0.4s;
+        z-index: -1; }
+    body .wrapper #eight {
+      position: relative;
+      transition: color 0.4s; }
+      body .wrapper #eight:hover {
+        color: #FF775C; }
+        body .wrapper #eight:hover:before, body .wrapper #eight:hover:after {
+          height: 100%; }
+      body .wrapper #eight:before, body .wrapper #eight:after {
+        content: '';
+        width: 100%;
+        height: 0px;
+        position: absolute;
+        transition: height 0.4s;
+        background-color: #fff;
+        z-index: -1; }
+      body .wrapper #eight:before {
+        top: 0;
+        left: 0; }
+      body .wrapper #eight:after {
+        bottom: 0;
+        left: 0; }
+    body .wrapper #nine {
+      transition: border-radius 0.2s; }
+      body .wrapper #nine:hover {
+        border-radius: 50px; }
+    body .wrapper #ten {
+      position: relative;
+      overflow: hidden;
+      transition: color 0.4s; }
+      body .wrapper #ten:hover {
+        color: #FF775C; }
+        body .wrapper #ten:hover:before {
+          width: 200%;
+          height: 200%;
+          border-radius: 0; }
+      body .wrapper #ten:before {
+        content: '';
+        height: 0%;
+        width: 0%;
+        background-color: #fff;
+        border-radius: 90%;
+        position: absolute;
+        top: -20px;
+        left: -40px;
+        transform: rotate(25deg);
+        transition: width 0.4s, height 0.4s, border-radius 0.4s;
+        z-index: -1; }
 
 /*
 button {

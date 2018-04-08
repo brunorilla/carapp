@@ -140,23 +140,131 @@ body {
 		}
 		#five {
 			transition: box-shadow 0.4s;
+			position: relative;
 			&:hover {
-				box-shadow: inset 0px 0px 30px #fff;
+				box-shadow: inset 0px 0px 15px #fff;
+				&:before {
+					transform: scale(1.2);
+					border-color: transparent;
+				}
+			}
+			&:before {
+				content: '';
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				border: 1px solid white;
+				top: 0;
+				left: 0;
+				transition: transform 0.3s, border-color 0.3s;
 			}
 		}
 		#six {
+			position: relative;
+			transition: color 0.3s;
+			overflow: hidden;
+			&:hover {
+				color: #FF775C;
+				&:before {
+					width: 100%;
+				}
+			}
+			&:before {
+				content: '';
+				height: 100%;
+				width: 0%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: #fff;
+				transition: width 1s cubic-bezier(1,0.3,.74,.32);
+				z-index: -1;
+			}
 
 		}
 		#seven {
+			position: relative;
+			overflow: hidden;
+			transition: color 0.3s;
+			&:hover {
+				color: #FF775C;
+				&:before {
+					width: 210%;
+					
+				}
+			}
+			&:before {
+				content: '';
+				width: 0%;
+				height: 200%;
+				position: absolute;
+				background-color: #fff;
+				transform: rotate(45deg);
+				top: -40px;
+				left: -100px;
+				transition: width 0.4s;
+				z-index: -1;
+			}
 
 		}
 		#eight {
-
+			position: relative;
+			transition: color 0.4s;
+			&:hover {
+				color: #FF775C;
+				&:before, &:after {
+					height: 100%;
+				}
+			}
+			&:before, &:after {
+				content: '';
+				width: 100%;
+				height: 0px;
+				position: absolute;
+				transition: height 0.4s;
+				background-color: #fff;
+				z-index: -1;
+			}
+			&:before {
+				top: 0;
+				left: 0;
+			}
+			&:after {
+				bottom: 0;
+				left: 0;
+			}
 		}
 		#nine {
-
+			transition: border-radius 0.2s;
+			&:hover {
+				border-radius: 50px;
+			}
 		}
 		#ten {
+			position: relative;
+			overflow: hidden;
+			transition: color 0.4s;
+			&:hover {
+				color: #FF775C;
+				&:before {
+					width: 200%;
+					height:200%;
+					border-radius: 0;
+				}
+			}
+			&:before {
+				content: '';
+				height: 0%;
+				width: 0%;
+				background-color: #fff;
+				border-radius: 90%;
+				position: absolute;
+				top: -20px;
+				left: -40px;
+				transform: rotate(25deg);
+				transition: width 0.4s, height 0.4s, border-radius 0.4s;
+				z-index: -1;
+			}
 
 		}
 	}
