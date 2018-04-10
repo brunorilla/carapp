@@ -119,7 +119,6 @@ function renderResults(data, count){
 function filterNumbers(string){
 
 	var regEx = /[^0-9]/;
-
 	if (regEx.test(string)){
 		return string;
 	}else {
