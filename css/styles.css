@@ -64,7 +64,30 @@ main {
         flex-direction: column;
         align-items: center;
         padding: 40px 0 40px;
-        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16); }
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+        position: relative;
+        cursor: pointer;
+        overflow: hidden; }
+        main .wrapper .lateral .navigator:hover:before, main .wrapper .lateral .navigator:hover:after {
+          width: 15%; }
+        main .wrapper .lateral .navigator:hover .logo {
+          transform: scale(1.1); }
+        main .wrapper .lateral .navigator:before, main .wrapper .lateral .navigator:after {
+          content: '';
+          width: 0%;
+          height: 100%;
+          position: absolute;
+          background-color: #d4d4d8;
+          transition: width .4s;
+          transform: rotate(-30deg); }
+        main .wrapper .lateral .navigator:before {
+          top: 50px;
+          left: -50px;
+          box-shadow: 3px -2px 6px 0px rgba(0, 0, 0, 0.24); }
+        main .wrapper .lateral .navigator:after {
+          bottom: 50px;
+          right: -50px;
+          box-shadow: -2px 3px 6px 0px rgba(0, 0, 0, 0.24); }
         main .wrapper .lateral .navigator .logo {
           background-color: transparent;
           width: 100%;
@@ -72,7 +95,8 @@ main {
           height: auto;
           border-radius: 50%;
           border: 1px solid white;
-          box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16); }
+          box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+          transition: transform .4s; }
       main .wrapper .lateral .info-wrapper {
         width: 100%;
         display: flex; }
@@ -186,9 +210,7 @@ main {
           width: 100%;
           max-width: 120px;
           height: auto;
-          background-color: grey;
-          transform-origin: 193px 164px;
-          animation: rotate 4s; }
+          background-color: grey; }
         main .main .first header h1 {
           width: 70%;
           font-size: 22px;
@@ -264,19 +286,24 @@ footer {
   background-color: #39373c;
   display: flex;
   justify-content: center;
-  padding: 90px 0 30px; }
-  footer .wrapper .copyright {
-    color: #bcbcbc;
-    font-family: Helvetica;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 22px; }
-  footer .wrapper .random-text {
-    color: #d5d5d5;
-    font-family: "Santa Fe Let Plain";
-    font-size: 36px;
-    font-weight: 400;
-    font-style: italic;
-    line-height: 22px; }
+  padding: 60px 0 30px; }
+  footer .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    footer .wrapper .copyright {
+      color: #bcbcbc;
+      font-family: Helvetica;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 22px;
+      margin: 10px 0; }
+    footer .wrapper .random-text {
+      color: #d5d5d5;
+      font-family: "Santa Fe Let Plain";
+      font-size: 36px;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 22px; }
 
 /*# sourceMappingURL=styles.css.map */

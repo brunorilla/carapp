@@ -145,8 +145,18 @@ function deleteWarning(){
 	}
 }
 
-/*
+// Learn about the Volga
+openVolga();
 
+function openVolga(){
+var clicks = true;
+let navigatorVolga = document.querySelector('.navigator');
 
-
-*/
+	navigatorVolga.addEventListener('click', function(){
+		if (clicks){
+		window.open('https://en.wikipedia.org/wiki/GAZ-21','_blank');
+		navigatorVolga.style.cursor = 'default';
+		return clicks = false;
+		}
+	});
+}
