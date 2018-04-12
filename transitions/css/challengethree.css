@@ -1,0 +1,69 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+html {
+  height: 100%; }
+
+body {
+  width: 100%;
+  min-height: 100%;
+  background-color: grey;
+  display: flex;
+  justify-content: center; }
+  body .wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 50px 0;
+    /* With bluf effect */ }
+    body .wrapper .transform {
+      width: 300px;
+      height: 200px;
+      box-sizing: border-box;
+      border: 2px solid white;
+      color: white;
+      font-size: 1.5em;
+      display: block;
+      margin: 30px 0; }
+      body .wrapper .transform .card-img {
+        width: 100%; }
+        body .wrapper .transform .card-img img {
+          width: 100%;
+          height: 100%; }
+    body .wrapper #one {
+      transition: transform 0.3s cubic-bezier(0.3, -0.28, 0.21, 1.3); }
+      body .wrapper #one:hover {
+        transform: scale(1.2); }
+    body .wrapper #two {
+      overflow: hidden; }
+      body .wrapper #two .card-img img {
+        transform: scale(1.5) rotate(10deg);
+        transition: transform 0.3s cubic-bezier(0.3, -0.28, 0.21, 1.3); }
+      body .wrapper #two:hover img {
+        transform: scale(1.3) rotate(0deg); }
+    body .wrapper #three {
+      overflow: hidden; }
+      body .wrapper #three .card-img img {
+        transition: transform 0.3s;
+        transform-origin: top left; }
+      body .wrapper #three:hover img {
+        transform: scale(1.3); }
+    body .wrapper #four {
+      overflow: hidden; }
+      body .wrapper #four .card-img img {
+        transition: transform 0.3s, filter 0.3s; }
+      body .wrapper #four:hover img {
+        transform: scale(2);
+        filter: blur(5px); }
+    body .wrapper #five {
+      overflow: hidden; }
+      body .wrapper #five .card-img img {
+        transition: transform 0.4s, filter 0.4s; }
+      body .wrapper #five:hover img {
+        transform: scale(1.25) rotate(10deg);
+        filter: grayscale(100%); }
+
+/*# sourceMappingURL=challengethree.css.map */
