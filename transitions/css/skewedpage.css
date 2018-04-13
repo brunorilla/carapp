@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+html {
+  height: 100%; }
+
+body {
+  width: 100%;
+  min-height: 100%;
+  background-color: crimson; }
+  body main {
+    width: 100%; }
+    body main header {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 30px 0; }
+      body main header h1 {
+        font-size: 4em;
+        color: #fff; }
+    body main section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      body main section .box {
+        width: 30%;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: #fff;
+        padding: 10px 25px;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.1); }
+        @media screen and (max-width: 920px) {
+          body main section .box {
+            width: 60%; } }
+        @media screen and (max-width: 768px) {
+          body main section .box {
+            width: 70%; } }
+        @media screen and (max-width: 500px) {
+          body main section .box {
+            width: 80%; } }
+        body main section .box:nth-child(2n+1) {
+          transform: skewX(10deg); }
+          body main section .box:nth-child(2n+1) p {
+            transform: skewX(-10deg); }
+        body main section .box:nth-child(2n+2) {
+          transform: skewX(-10deg); }
+          body main section .box:nth-child(2n+2) p {
+            transform: skewX(10deg); }
+        body main section .box p {
+          font-size: 1.2em; }
+
+/*# sourceMappingURL=skewedpage.css.map */
