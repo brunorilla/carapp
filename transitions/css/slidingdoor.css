@@ -12,14 +12,12 @@ html {
     html body .wrapper {
       width: 90%;
       max-width: 1024px;
-      display: flex;
-      justify-content: center;
       margin: 0 auto;
-      padding: 60px 0 0 0;
-      overflow: hidden; }
-      html body .wrapper:hover .second {
-        transform: translateX(0px); }
-      html body .wrapper .main, html body .wrapper .second {
+      overflow: hidden;
+      position: relative; }
+      html body .wrapper:hover #second {
+        transform: translateX(100%); }
+      html body .wrapper .main {
         width: 60%;
         display: flex;
         flex-direction: column;
@@ -27,17 +25,19 @@ html {
         align-self: center;
         color: white;
         padding: 30px 20px; }
-        html body .wrapper .main h1, html body .wrapper .second h1 {
+        html body .wrapper .main h1 {
           font-size: 4em;
           margin: 0 0 15px 0; }
-        html body .wrapper .main p, html body .wrapper .second p {
+        html body .wrapper .main p {
           font-size: 1.5em;
           text-align: center; }
-      html body .wrapper .main {
+      html body .wrapper #first {
         background-color: teal; }
-      html body .wrapper .second {
+      html body .wrapper #second {
         background-color: red;
-        transform: translateX(-400px);
-        transition: transform 0.3s cubic-bezier(1, 0.02, 0.94, 0.56); }
+        position: absolute;
+        top: 0;
+        right: 100%;
+        transition: transform 0.3s; }
 
 /*# sourceMappingURL=slidingdoor.css.map */

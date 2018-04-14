@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+html {
+  height: 100%; }
+
+ul {
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  color: white;
+  padding: 20px 0; }
+  a:visited {
+    color: white;
+    text-decoration: none; }
+  a:active {
+    color: orange; }
+
+li {
+  transition: background-color .3s;
+  cursor: pointer; }
+  li:hover {
+    background-color: teal; }
+
+body {
+  width: 100%;
+  min-height: 100%; }
+  body .wrapper {
+    width: 100%;
+    max-width: 1920px;
+    display: flex;
+    margin: 0 auto; }
+    body .wrapper header {
+      width: 100%;
+      position: relative; }
+      body .wrapper header .main-navigation {
+        width: 100%;
+        display: flex;
+        background-color: #cc3d37;
+        justify-content: space-between;
+        cursor: pointer; }
+        body .wrapper header .main-navigation .hamburger-icon {
+          width: 80px;
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          background-color: rgba(196, 125, 122, 0.5);
+          padding: 10px;
+          margin: 0 0 0 20px; }
+          body .wrapper header .main-navigation .hamburger-icon img {
+            width: 64px;
+            height: auto; }
+          body .wrapper header .main-navigation .hamburger-icon:hover ~ .side-navigation {
+            transform: translate(0%, 5%);
+            left: 50%; }
+        body .wrapper header .main-navigation ul {
+          width: 30%;
+          display: flex;
+          justify-content: space-around;
+          align-content: center;
+          align-items: center; }
+          body .wrapper header .main-navigation ul li {
+            list-style-type: none; }
+      body .wrapper header .side-navigation {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        background-color: #cc3d37;
+        min-height: 100%;
+        height: 600px;
+        transform: translate(-100%, 5%);
+        position: absolute;
+        top: 0;
+        left: 0%; }
+        body .wrapper header .side-navigation ul {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          padding: 40px 0 0 0; }
+          body .wrapper header .side-navigation ul li {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 20px 0; }
+
+/*# sourceMappingURL=navbar.css.map */
