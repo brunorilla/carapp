@@ -29,6 +29,28 @@ li {
 	}
 }
 
+#header.open #second-nav {
+	transform: translateX(0);
+}
+
+#header.open .nav-toggle span {
+	margin-left: 5px;
+}	
+
+#header.open .nav-toggle span:nth-of-type(1){
+	transform: rotate(33deg);
+	transform-origin: top left;
+}
+
+#header.open .nav-toggle span:nth-of-type(2){
+	opacity: 0;
+}
+#header.open .nav-toggle span:nth-of-type(3){
+	transform: rotate(-33deg); 
+	transform-origin: top left;
+}
+
+
 body {
 	width: 100%;
 	min-height: 100%;
@@ -39,13 +61,16 @@ body {
 		margin: 0 auto;
 		header {	
 			width: 100%;
-			position: relative;		
+			position: relative;
 			.main-navigation {
 				width: 100%;
 				display: flex;
 				background-color: rgba(204, 61, 55, 1);
+				box-sizing: border-box;
 				cursor: pointer;
-				justify-content: space-between;
+				justify-content: flex-end;
+				padding: 20px 0;
+				z-index: -1;
 				ul {
 					width: 30%;
 					align-content: center;
@@ -66,53 +91,51 @@ body {
 				box-shadow: 0px 0px 10px rgba(0,0,0,.2);
 				display: flex;
 				justify-content: center;
+				box-sizing: border-box;
 				position: absolute;
 				top: 0;
-				left: 0%;
+				left: 0;
+				z-index: 1;
+				transform: translateX(-100%);
+				transition: transform 0.4s;
 				.nav-toggle {
 					width: 50px;
-					min-height: 40px;
+					max-height: 40px;
+					align-items: center;
 	 				background-color: rgba(204, 61, 55, 1);
 					position: absolute;
-					top: 19px;
-					right: -54px;
-					padding: 2px;
+					top: 0px;
+					left: 100%;
+					padding: 3px 0px;
+					display: flex;
+					flex-direction: column;
+					box-sizing: border-box;
+					cursor:pointer;
+					transition: background-color 0.3s ease;
+					&:hover {
+						background-color: rgba(0,0,0,.1);
+					}
 					span {
 						width: 40px;
 						height: 3px;
 						background-color: #fff;
-						position: absolute;
-						display: block;
-						top: 45%;
-						left: 10%;
-						padding: 2px;
-						&:before {
-							width: 40px;
-							height: 3px;
-							padding: 2px;
-							content: '';
-							background-color: #fff;
-							display: block;
-							position: relative;
-							top: -10px;
-							
-						}
+						margin: 4px 0;
+						transition: transform .3s ease, opacity .3s ease;
 					}
-					ul {
+				}
+				ul {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					padding: 40px 0 0 0;
+					li {
 						width: 100%;
 						display: flex;
-						flex-direction: column;
-						padding: 40px 0 0 0;
-						li {
-							width: 100%;
-							display: flex;
-							justify-content: center;
-							margin: 20px 0;
-
-						}
-					}
+						justify-content: center;
+						margin: 20px 0;
+					}	
+				}	
 			}
 		}
 	}
-}
 }
