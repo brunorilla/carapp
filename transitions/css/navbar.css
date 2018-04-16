@@ -105,7 +105,7 @@ body {
             height: 3px;
             background-color: #fff;
             margin: 4px 0;
-            transition: transform .3s ease, opacity .3s ease; }
+            transition: transform .4s ease, opacity .3s ease; }
         body .wrapper header .side-navigation ul {
           width: 100%;
           display: flex;
